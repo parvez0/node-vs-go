@@ -38,7 +38,7 @@ bower_components
 build/Release
 
 # Dependency directories
-node_modules/
+nodeserver/node_modules/
 jspm_packages/
 
 # TypeScript v1 declaration files
@@ -102,3 +102,20 @@ dist
 
 # TernJS port file
 .tern-port
+
+# ide
+.idea/
+
+# go modules
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
