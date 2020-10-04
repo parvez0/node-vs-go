@@ -1,0 +1,12 @@
+[Unit]
+Description=Nodejs server
+
+# append here other services you want server to wait for them to start
+After=network.target httpd.service squid.service nfs-server.service mysqld.service mysql.service named.service postfix.service chronyd.service
+
+[Service]
+Type=simple
+RuntimeDirectory=nodeserver
+RuntimeDirectoryMode=0775
+PIDFile=/var/run/node/nodeserver.pid
+ExecStart=/usr/bin/node $HOME/node-vs-go/nodeserver/app.js
