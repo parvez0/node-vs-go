@@ -1,0 +1,12 @@
+[Unit]
+Description=Go server
+
+# append here other services you want server to wait for them to start
+After=network.target httpd.service squid.service nfs-server.service mysqld.service mysql.service named.service postfix.service chronyd.service
+
+[Service]
+Type=simple
+RuntimeDirectory=goserver
+RuntimeDirectoryMode=0775
+PIDFile=/var/run/node/nodeserver.pid
+ExecStart=/usr/local/go/bin/go run $HOME/node-vs-go/goserver/main.go
