@@ -1,4 +1,4 @@
-# node-vs-go
+# Node.js vs Go
 Benchmarking rest api of Node.js and GO
 
 I was working on a Node.js micro-service which handles a lot of synchronous api calls to external services and 
